@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_MOUSE_SCRL_VAL 50 // default: 10
+#define ZMK_MOUSE_SCRL_VAL 80
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
            	#sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            tap-ms = <40>;
         };
     };
 
