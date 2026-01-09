@@ -23,6 +23,12 @@
             bindings = <&mkp MB4>, <&mkp MB5>;
             tap-ms = <20>;
         };
+        msc_encoder: msc_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&mkp SCRL_DOWN>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -44,8 +50,8 @@
             >;
 
             sensor-bindings =
-                <&mkp_encoder>,         // Left  encoder
-                <&inc_dec_kp SCRL_UP SCRL_DOWN>;  // Right encoder
+                <&mkp_encoder>,  // Left  encoder
+                <&msc_encoder>;  // Right encoder
         };
 
         lower_layer {
