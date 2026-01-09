@@ -10,7 +10,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define ZMK_MOUSE_SCRL_VAL 140
+// Mouse bindings
+#define ZMK_MOUSE_SCRL_VAL 50 // default: 10
+#include <dt-bindings/zmk/pointing.h>
+
 
 / {
     behaviors {
@@ -42,7 +45,7 @@
 
             sensor-bindings =
                 <&mkp_encoder>,         // Left  encoder
-                <&inc_dec_kp UP DOWN>;  // Right encoder
+                <&inc_dec_kp SCRL_UP SCRL_DOWN>;  // Right encoder
         };
 
         lower_layer {
